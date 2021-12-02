@@ -1,50 +1,50 @@
-// // hooks;
-// import { useState } from 'react';
+// hooks;
+import { useState } from 'react';
 
-// const Form = ({ onSubmit }) => {
-//     const [name, setName] = useState('');
-//     const [age, setAge] = useState('');
+const Form = ({ onSubmit }) => {
+    const [name, setName] = useState('');
+    const [age, setAge] = useState('');
 
-//     const onChangeHandler = e => {
-//         const { name, value } = e.target;
-//         if (name === 'name') setName(value);
-//         if (name === 'age') setAge(value);
-//     };
+    const onChangeHandler = e => {
+        const { name, value } = e.target;
+        if (name === 'name') setName(value);
+        if (name === 'age') setAge(value);
+    };
 
-//     const handleSubmit = e => {
-//         e.preventDefault();
-//         onSubmit({ name, age });
-//         setName('');
-//         setAge('');
-//     };
+    const handleSubmit = e => {
+        e.preventDefault();
+        onSubmit({ name, age });
+        setName('');
+        setAge('');
+    };
 
-//     return (
-//         <form onSubmit={handleSubmit}>
-//             <label>
-//                 Name
-//                 <input
-//                     type="text"
-//                     name="name"
-//                     value={name}
-//                     onChange={onChangeHandler}
-//                 />
-//             </label>
+    return (
+        <form onSubmit={handleSubmit}>
+            <label>
+                Name
+                <input
+                    type="text"
+                    name="name"
+                    value={name}
+                    onChange={onChangeHandler}
+                />
+            </label>
 
-//             <label>
-//                 Age
-//                 <input
-//                     type="text"
-//                     name="age"
-//                     value={age}
-//                     onChange={onChangeHandler}
-//                 />
-//             </label>
-//             <button type="submit">Submit</button>
-//         </form>
-//     );
-// };
+            <label>
+                Age
+                <input
+                    type="text"
+                    name="age"
+                    value={age}
+                    onChange={onChangeHandler}
+                />
+            </label>
+            <button type="submit">Submit</button>
+        </form>
+    );
+};
 
-// export default Form;
+export default Form;
 
 //class
 // import React, { Component } from 'react';
@@ -156,24 +156,24 @@
 
 ////useLayout
 
-import { useLayoutEffect, useState } from 'react';
+// import { useLayoutEffect, useState } from 'react';
 
-const Form = () => {
-    const [number, setNumber] = useState(0);
+// const Form = () => {
+//     const [number, setNumber] = useState(0);
 
-    useLayoutEffect(() => {
-        if (number === 0) setNumber(Math.random());
-    }, [number]);
+//     useLayoutEffect(() => {
+//         if (number === 0) setNumber(Math.random());
+//     }, [number]);
 
-    return (
-        <div
-            onClick={() => {
-                setNumber(0);
-            }}
-        >
-            {number}
-        </div>
-    );
-};
+//     return (
+//         <div
+//             onClick={() => {
+//                 setNumber(0);
+//             }}
+//         >
+//             {number}
+//         </div>
+//     );
+// };
 
-export default Form;
+// export default Form;
